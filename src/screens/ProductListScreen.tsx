@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, TouchableOpacity, TextInput, Text} from 'react-native';
+import {View, TouchableOpacity, TextInput} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {ShoppingCart, Search, Heart} from 'lucide-react-native';
 import ProductList from '../components/ProductList';
@@ -27,7 +27,6 @@ const ProductListScreen: React.FC = () => {
         <TouchableOpacity onPress={() => navigation.navigate('Favorites')}>
           <Heart color="black" size={24} />
         </TouchableOpacity>
-        <Text>;</Text>
       </View>
 
       <ProductList searchQuery={searchQuery} />
